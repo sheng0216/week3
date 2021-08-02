@@ -1,0 +1,399 @@
+.banner {
+    background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner.png?raw=true);
+    height: 840px;
+    @include bg-cover;
+    &__title {
+        font-size: $font-h1;
+        font-weight: $fw-bold;
+    }
+    &__text {
+        font-size: $font-h3;
+        font-weight: $fw-no;
+    }
+}
+@include pad {
+    .banner {
+        &__title {
+            font-size: $font-h2;
+            font-weight: normal;
+        }
+        &__text {
+            font-size: $font-md;
+            font-weight: $fw-500;
+        }
+    }
+}
+@include mobile {
+    .banner {
+        background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner-sm.png?raw=true);
+        height: 394px;
+        &__title {
+            font-size: $font-h4;
+            line-height: $lh-xl;
+        }
+        &__text {
+            font-size: $font-base;
+            line-height: $lh-md;
+        }
+    }
+}
+.major {
+    padding-top: 60px;
+    padding-bottom: $space-12;
+    &__title {
+        font-size: $font-h2;
+        margin-bottom: $space-9;
+        font-weight: $fw-bold;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__item {
+            width: 23%;
+        }
+        &__img {
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            margin-bottom: $space-4;
+        }
+        &__title {
+            font-size: $font-lg;
+            margin-bottom: $space-1;
+            color: $primary;
+            font-weight: bold;
+        }
+    }
+}
+@include pad {
+    .major {
+        padding-top: $space-9;
+        padding-bottom: $space-10;
+        &__title {
+            &--lg {
+                font-size: $font-h4;
+                margin-bottom: $space-8;
+            }
+        }
+        &__list {
+            justify-content: space-around;
+            &__item {
+                width: 37%;
+                &:nth-child(-n + 2) {
+                    margin-bottom: $space-8;
+                }
+            }
+        }
+    }
+}
+@include mobile {
+    .major {
+        padding-top: $space-8;
+        padding-bottom: $space-9;
+        &__title {
+            &--sm {
+                font-size: $font-lg;
+                line-height: $lh-lg;
+                margin-bottom: $space-5;
+            }
+        }
+        &__list {
+            justify-content: space-around;
+            &__item {
+                width: 74%;
+                &:nth-child(-n + 3) {
+                    margin-bottom: $space-8;
+                }
+            }
+        }
+    }
+}
+
+.classic {
+    padding-top: 60px;
+    padding-bottom: $space-12;
+    &__title {
+        font-size: $font-h2;
+        margin-bottom: $space-9;
+        font-weight: $fw-bold;
+    }
+    &__item {
+        display: flex;
+        position: relative;
+        &:nth-child(-n + 2) {
+            margin-bottom: $space-8;
+        }
+        &__img {
+            width: 60%;
+            margin-right: $space-7;
+            &--reverse {
+                margin-right: 0;
+                margin-left: $space-7;
+            }
+        }
+        &__text {
+            font-size: $font-h2;
+            font-family: Roboto;
+            font-style: italic;
+            font-weight: $fw-900;
+            display: flex;
+            align-items: center;
+        }
+        &--reverse {
+            flex-direction: row-reverse;
+        }
+    }
+}
+@include pad {
+    .classic {
+        padding-top: $space-9;
+        padding-bottom: $space-10;
+        &__title {
+            font-size: $font-h4;
+            margin-bottom: $space-8;
+        }
+        &__item {
+            &:nth-child(-n + 2) {
+                margin-bottom: $space-1;
+            }
+            &--reverse {
+                flex-direction: row;
+            }
+            &__img {
+                &--reverse {
+                    margin-right: $space-7;
+                    margin-left: 0;
+                }
+            }
+            &__text {
+                font-size: 28px;
+                line-height: $lh-xl;
+            }
+        }
+    }
+}
+@include mobile {
+    .classic {
+        padding-top: $space-8;
+        padding-bottom: $space-9;
+        &__title {
+            font-size: $font-md;
+            margin-bottom: $space-5;
+        }
+        &__item {
+            &__img {
+                width: 100%;
+                margin-right: 0;
+            }
+            &__text {
+                @include position-center;
+            }
+        }
+    }
+}
+.design {
+    background-image: url(https://hexschool.github.io/webLayoutTraining1st/week3/bg.png);
+    height: auto;
+    @include bg-cover;
+    padding-top: 60px;
+    padding-bottom: $space-12;
+    &__title {
+        font-size: $font-h2;
+        margin-bottom: $space-9;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &__item {
+            width: 48%;
+            position: relative;
+        }
+        &__text {
+            @include position-center;
+            font-size: $font-xl;
+        }
+    }
+}
+@include pad {
+    .design {
+        padding-top: $space-9;
+        padding-bottom: $space-10;
+        &__title {
+            font-size: $font-h4;
+            margin-bottom: $space-8;
+        }
+        &__list {
+            &__text {
+                font-size: $font-h4;
+            }
+        }
+    }
+}
+@include mobile {
+    .design {
+        height: auto;
+        padding-top: $space-8;
+        padding-bottom: $space-9;
+        &__title {
+            font-size: $font-md;
+            margin-bottom: $space-5;
+        }
+        &__list {
+            &__item {
+                width: 100%;
+                &:first-child {
+                    margin-bottom: $space-base;
+                }
+            }
+        }
+    }
+}
+.cutomer {
+    padding-top: 60px;
+    padding-bottom: $space-12;
+    &__title {
+        font-size: $font-h2;
+        margin-bottom: $space-9;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex: 1 0 0%;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            width: 23%;
+            border-radius: 4px;
+        }
+        &__img {
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+        }
+        &__body {
+            padding: $space-4;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+            &--shadow {
+                box-shadow: 0px 2px 6px gray;
+            }
+        }
+        &__title {
+            font-size: $font-sm;
+            margin-bottom: $space-1;
+        }
+        &__text {
+            font-size: $font-base;
+            margin-bottom: $space-1;
+        }
+        &__small {
+            font-size: $font-sm;
+        }
+    }
+}
+@include pad {
+    .cutomer {
+        padding-top: $space-9;
+        padding-bottom: $space-10;
+        &__title {
+            font-size: $font-h4;
+            margin-bottom: $space-8;
+        }
+        &__list {
+            &__item {
+                width: 48%;
+                &:nth-child(-n + 2) {
+                    margin-bottom: $space-8;
+                }
+            }
+        }
+    }
+}
+@include mobile {
+    .cutomer {
+        padding-top: $space-8;
+        padding-bottom: $space-9;
+        &__title {
+            font-size: $font-md;
+            margin-bottom: $space-5;
+        }
+        &__list {
+            &__item {
+                width: 100%;
+                &:nth-child(-n + 3) {
+                    margin-bottom: $space-4;
+                }
+            }
+        }
+    }
+}
+.form {
+    padding-top: 60px;
+    padding-bottom: $space-12;
+    &__title {
+        font-size: $font-h2;
+        margin-bottom: $space-9;
+    }
+    &__container {
+        max-width: 64%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    &__text {
+        font-size: $font-md;
+        margin-bottom: $space-5;
+    }
+    &__group {
+        margin-bottom: $space-4;
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        outline: none;
+        font-size: $font-base;
+        line-height: 1.5;
+        padding: 12px 16px;
+        border: 1px solid #000;
+        border-radius: 4px;
+    }
+}
+
+@include pad {
+    .form {
+        padding-top: $space-9;
+        padding-bottom: $space-10;
+        &__title {
+            font-size: $font-h4;
+            margin-bottom: $space-8;
+        }
+        &__text {
+            font-size: $font-base;
+            margin-bottom: $space-4;
+        }
+        &__group {
+            margin-bottom: $space-1;
+        }
+        &__input {
+            padding: $space-1 $space-3;
+        }
+    }
+}
+@include mobile {
+    .form {
+        padding-top: $space-8;
+        padding-bottom: $space-9;
+        &__title {
+            font-size: $font-md;
+            margin-bottom: $space-5;
+        }
+        &__container {
+            min-width: 100%;
+        }
+        &__text {
+            margin-bottom: $space-1;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@mixin pad {
+    @media (max-width:768px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width:375px) {
+        @content;
+    }
+}
+@mixin hide-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 101%;
+}
+@mixin bg-cover {
+    background-position: center center;
+    background-size: cover;
+}
+@mixin position-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+// footer 

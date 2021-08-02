@@ -1,0 +1,40 @@
+.text-start{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-end{
+    text-align: right;
+}
+.d-flex{
+    display: flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-end{
+    justify-content: flex-end;
+}
+.align-items-center{
+    align-items: center;
+    align-self: center;
+}
+.align-self-center{
+    align-self: center;
+}
+
+
+
+.w-100{
+    width: 100%;
+}
+.h-100{
+    height: 100%;
+}
